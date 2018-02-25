@@ -1,7 +1,7 @@
-﻿# GHR_android_app_clone
+﻿# GHR_android_app
 
 
-
+An app which is used to provide emergency services during the golden hour.
 
 
 **Important Links**

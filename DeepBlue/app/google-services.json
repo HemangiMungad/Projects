@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "208988503",
+    "firebase_url": "https://ghr6-68c38.firebaseio.com",
+    "project_id": "ghr6-68c38",
+    "storage_bucket": "ghr6-68c38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208988503:android:5d37f57a1a93af26",
+        "android_client_info": {
+          "package_name": "com.example.karan.DeepBlue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208988503-mhmr6fi9ngrf7l00htbbhl5224l1a2u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFF90jeNtoLT-sgVoWWAgrANGJhdpBM58"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

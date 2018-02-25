@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.example.karan.DeepBlue.MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:src="@drawable/abc" />
+
+    <Button
+        android:id="@+id/customer"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="230dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:text="I am a bystander, Need Help!" />
+
+    <Button
+        android:id="@+id/driver"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="165dp"
+        android:background="@color/pn"
+        android:layout_height="wrap_content"
+        android:text="I am a Volunteer" />
+    <Button
+        android:id="@+id/em"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:text="Emergency Hospital" />
+
+    <Button
+        android:id="@+id/am"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pn"
+        android:text="Call AMbulance" />
+
+
+</RelativeLayout>

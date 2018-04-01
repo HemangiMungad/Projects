@@ -1,4 +1,4 @@
-package com.example.lenovo.tourguide.Malls;
+package com.example.lenovo.tourguide.Theatre;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -39,7 +39,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+public class TheatreMapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -118,9 +118,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        Button btnmall = (Button) findViewById(R.id.btnmall);
-        btnmall.setOnClickListener(new View.OnClickListener() {
-            String search = "mall";
+        Button btncinema = (Button) findViewById(R.id.btncinema);
+        btncinema.setOnClickListener(new View.OnClickListener() {
+            String search = "cinema";
 
             @Override
             public void onClick(View v) {
@@ -131,9 +131,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
-                GetNearbyPlaces getNearbyPlacesData = new GetNearbyPlaces();
+                GetNearbyPlaces4 getNearbyPlacesData = new GetNearbyPlaces4();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this, "Nearby Malls", Toast.LENGTH_LONG).show();
+                Toast.makeText(TheatreMapsActivity.this, "Nearby Theatres", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -203,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        Toast.makeText(MapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
+        Toast.makeText(TheatreMapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));
 

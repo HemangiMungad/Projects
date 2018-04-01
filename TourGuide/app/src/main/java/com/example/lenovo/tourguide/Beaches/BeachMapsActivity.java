@@ -1,4 +1,4 @@
-package com.example.lenovo.tourguide.Restaurants;
+package com.example.lenovo.tourguide.Beaches;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -39,7 +39,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+public class BeachMapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -118,9 +118,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        Button btnres = (Button) findViewById(R.id.btnres);
-        btnres.setOnClickListener(new View.OnClickListener() {
-            String search = "restaurant";
+        Button btnbeach = (Button) findViewById(R.id.btnbeach);
+        btnbeach.setOnClickListener(new View.OnClickListener() {
+            String search = "beach";
 
             @Override
             public void onClick(View v) {
@@ -131,9 +131,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
-                GetNearbyPlacse2 getNearbyPlaces1Data = new GetNearbyPlacse2();
+                GetNearbyPlaces3 getNearbyPlaces1Data = new GetNearbyPlaces3();
                 getNearbyPlaces1Data.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this, "Nearby Malls", Toast.LENGTH_LONG).show();
+                Toast.makeText(BeachMapsActivity.this, "Nearby Beaches", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -203,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        Toast.makeText(MapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
+        Toast.makeText(BeachMapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));
 

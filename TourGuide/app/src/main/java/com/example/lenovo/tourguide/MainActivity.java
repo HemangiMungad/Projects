@@ -6,7 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.lenovo.tourguide.Malls.MapsActivity;
+import com.example.lenovo.tourguide.Beaches.BeachMapsActivity;
+import com.example.lenovo.tourguide.Hospitals.HospitalMapsActivity;
+import com.example.lenovo.tourguide.Lodge.LodgeMapsActivity;
+import com.example.lenovo.tourguide.Malls.MallMapsActivity;
+import com.example.lenovo.tourguide.Restaurants.RestaurantMapsActivity;
+import com.example.lenovo.tourguide.Theatre.TheatreMapsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,32 +68,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goTosixthActivity() {
-        Intent i= new Intent(this, com.example.lenovo.tourguide.Lodge.MapsActivity.class);
+        Intent i= new Intent(this, LodgeMapsActivity.class);
         startActivity(i);
     }
 
     private void goToFifthActivity() {
-        Intent i= new Intent(this, com.example.lenovo.tourguide.Theatre.MapsActivity.class);
+        Intent i= new Intent(this, TheatreMapsActivity.class);
         startActivity(i);
     }
 
     private void goToFourthActivity() {
-        Intent i= new Intent(this, com.example.lenovo.tourguide.Restaurants.MapsActivity.class);
+        Intent i= new Intent(this, RestaurantMapsActivity.class);
         startActivity(i);
     }
 
     private void goToThirdActivity() {
-        Intent i= new Intent(this, com.example.lenovo.tourguide.Beaches.MapsActivity.class);
+        Intent i= new Intent(this, BeachMapsActivity.class);
         startActivity(i);
     }
 
     private void goToSecondActivity() {
-        Intent i= new Intent(this, com.example.lenovo.tourguide.Hospitals.MapsActivity.class);
+        Intent i= new Intent(this, HospitalMapsActivity.class);
         startActivity(i);
     }
 
     private void goToFirstActivity() {
-        Intent i= new Intent(this, MapsActivity.class);
+        Intent i= new Intent(this, MallMapsActivity.class);
         startActivity(i);
     }
 }

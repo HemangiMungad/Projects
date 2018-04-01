@@ -1,4 +1,4 @@
-package com.example.lenovo.tourguide.Hospitals;
+package com.example.lenovo.tourguide.Restaurants;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -39,7 +39,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+public class RestaurantMapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -118,22 +118,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
 
-        Button btnHospital = (Button) findViewById(R.id.btnHospital);
-        btnHospital.setOnClickListener(new View.OnClickListener() {
-            String Hospital = "hospital";
+        Button btnres = (Button) findViewById(R.id.btnres);
+        btnres.setOnClickListener(new View.OnClickListener() {
+            String search = "restaurant";
 
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
                 mMap.clear();
-                String url = getUrl(latitude, longitude, Hospital);
+                String url = getUrl(latitude, longitude, search);
                 Object[] DataTransfer = new Object[2];
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
-                GetNearbyPlaces1 getNearbyPlaces1Data = new GetNearbyPlaces1();
+                GetNearbyPlacse2 getNearbyPlaces1Data = new GetNearbyPlacse2();
                 getNearbyPlaces1Data.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this, "Nearby Malls", Toast.LENGTH_LONG).show();
+                Toast.makeText(RestaurantMapsActivity.this, "Nearby Restaurants", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -203,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        Toast.makeText(MapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
+        Toast.makeText(RestaurantMapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));
 
